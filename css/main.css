@@ -1,0 +1,155 @@
+:root {
+  /* Primary */
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+
+  /* Neutral */
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: var(--light-gray);
+}
+
+.main {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  min-height: 100%;
+  padding: 50px 0;
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "info"
+  "price"
+  "whyus";
+}
+
+.info {
+  grid-area: info;
+  padding: 25px 20px 30px;
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+}
+
+.info__h1 {
+  color: var(--cyan);
+  font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+.info__h2 {
+  color: var(--bright-yellow);
+  font-size: clamp(1.6rem, 2.5vw, 1.9rem);
+  line-height: 1.2;
+  margin: 20px 0;
+}
+
+.info__p {
+  color: var(--grayish-blue);
+  font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+}
+
+.price {
+  grid-area: price;
+  padding: 20px;
+  background-color: var(--cyan);
+  color: #fff;
+}
+
+.price__h2 {
+  font-size: 1.8rem;
+}
+
+.price__p {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 2.7rem;
+  font-weight: 700;
+}
+
+.price__span {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-left: 10px;
+  color: hsl(181deg 60% 65%);
+}
+
+.price__p--small {
+  font-size: 1.5rem;
+}
+
+.price__a {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin-top: 35px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--bright-yellow);
+  box-shadow: 0px 5px 17px 0px rgb(0 0 0 / 30%);
+  border-radius: 5px;
+}
+
+.why-us {
+  grid-area: whyus;
+  padding: 20px;
+  background-color: #4abebd;
+  color: #fff;
+  border-radius: 0 0 8px 8px;
+}
+
+.why-us__h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.why-us__ul {
+  padding: 0;
+  list-style: none;
+}
+
+.why-us__li {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 210px max-content;
+    grid-template-areas: 
+    "info info"
+    "price whyus";
+  }
+
+  .info {
+    display: grid;
+    align-content: center;
+    padding: 0 40px;
+  }
+
+  .price {
+    padding: 40px 70px 40px 40px;
+    border-radius: 0 0 0 8px;
+  }
+
+  .price__a {
+    margin-top: 45px;
+  }
+
+  .why-us {
+    padding: 40px;
+    border-radius: 0 0 8px 0;
+  }
+}
