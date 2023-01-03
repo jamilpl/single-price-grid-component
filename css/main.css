@@ -26,10 +26,10 @@ body {
   display: grid;
   place-content: center;
   grid-template-columns: 1fr;
-  grid-template-areas: 
-  "info"
-  "price"
-  "whyus";
+  grid-template-areas:
+    "info"
+    "price"
+    "whyus";
 }
 
 .info {
@@ -128,9 +128,9 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 210px max-content;
-    grid-template-areas: 
-    "info info"
-    "price whyus";
+    grid-template-areas:
+      "info info"
+      "price whyus";
   }
 
   .info {
